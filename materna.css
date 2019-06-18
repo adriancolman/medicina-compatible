@@ -1,0 +1,15 @@
+#title-form{
+font-family:'Amatic SC', cursive;
+font-size: 120px;
+text-align: center;
+};
+
+#reg-msg{
+    color: blue;
+    text-align: center;
+    font-size: 100px;
+};
+
+.form-group{
+    color: #9B5094;
+}

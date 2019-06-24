@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS Usuarios(
+    UsuarioId INT AUTO_INCREMENT,
+    Username VARCHAR(20) NOT NULL UNIQUE,
+    Password VARCHAR(255) NOT NULL,
+    PRIMARY KEY(UsuarioId)
+);

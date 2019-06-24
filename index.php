@@ -1,15 +1,8 @@
 <?php
-echo "lluvia";
-
+    session_start();
+    if(isset($_SESSION["username"])){
+        header('Location: /medicina-compatible/home.php');
+    } else{
+        header('Location: medicina-compatible\login.php');
+    }
 ?>
-
-<html>
-    <head>
-        <body>
-            <a href=signup.php>registrate</a>
-        
-        </body>
-    
-    </head>
-
-</html>

@@ -13,3 +13,18 @@ text-align: center;
 .form-group{
     color: #9B5094;
 }
+
+header{
+   background-color: #7697B6; 
+   font-family:'Amatic SC', cursive;
+   color: #9B5094;
+   margin: 0%auto;
+   display: flexbox;
+   
+
+}
+
+.logo{
+    margin-left: 12px;
+    padding: 5px;;
+}

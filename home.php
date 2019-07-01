@@ -18,7 +18,7 @@ session_start();
 
 </head>
     <body>
-        <div class="container" style="margin-top:10px">
+        <div class="container" style="">
             <header>
             <div class="row">
                 <div class="col-2">
@@ -37,25 +37,82 @@ session_start();
 
                 </div>
                 <div class="col-3">
-                    <span> consultar para no dudar  </span>
+                   <p style="margin-top:10px"> consultar para no dudar  </p>
                 </div>
-                <div class="offset-5 col-2">    
-                    <div class="dropdown open" >
-                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                 Dropdown
-                                 </button>
-                                                     <div class="dropdown-menu">
-                                 <h6 class="dropdown-header">Dropdown header</h6>
-                            <a class="dropdown-item" href="#!">Action</a>
-                           <a class="dropdown-item" href="#!">Another action</a>
-                           </div>
-                            </div>
+                <div class="offset-1 col-3">
+                  <input type="text" name="seacrh" placeholder="search" style="margin-top:10">  
+                </div>
+                <div class="offset-1 col-2">    
+                    <div class="btn-group">
+                    
+                    <button type="button" style="margin-top:10; background-color:#985094; padding-right:20" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="login.php">inicia sesión</a>
+                        <a class="dropdown-item" href="signup.php">registrate</a>
+                        <a class="dropdown-item" href="#!">cerrar seión</a>
+                    </div>
+                    </div>
+
+                     
                 </div>
 
             </div>
 
 
             </header>
+                  <!--cuerpo de pagina-->
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-0 col-xs-0" style="background-color:#C0CFDD;">
+                    <img src="lactancia-materna-beneficios-madre.jpg" style="margin:0%auto; width:300px;">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="background-color:#C0CFDD">
+                    <div class="offset-1" style="margin-top:45px;">
+                        <h1>¿Consulta si es compatible con la lactancia?</h1>
+                        <br>
+                        <h3>
+                            Toda la información necesaria acerca de cualquier medicamento. <br>
+                            Por ejemplo: <a href="ibuprofeno.php">ibuprofeno,</a>
+                            <a href="diclofenac.php" class="diclofenac">diclofenac,</a>
+                            <a href="aspirina" class="aspirina">aspirina</a>, etc.
+                        </h3>
+            
+                    </div>
+                </div>
+            </div>   
+            
+                            <!--avisos-->
+
+            <div class="row">
+                <div class="  col-lg-7 offset-lg-3   col-md-7 offset-md-3 col-sm-12 col-xs-12">
+                    <div class="a-favor" style="margin-top:80;">
+                        <h4 class="subtitle" style="color:red; margin-top:30px;">
+                            Por la lactancia materna
+
+                        </h4>
+                        <p class="">La lactancia materna es el fenómeno más saludable para bebés y madres 
+                            en todo tiempo y lugar. Muy pocas situaciones justifican contraindicarla.</p>
+
+                    </div>
+                </div>
+            </div>                
+            <div class="row">
+                <div class=" col-lg-7 offset-lg-3  col-md-7 offset-md-3 col-sm-12 col-xs-12">
+                    <h4 class="subtitle"  style="color:red; margin-top:30px;">Hecho por profesionales
+
+                    </h4 >
+                    <p>
+                    Las indicaciones son recopiladas de <a href="http://www.e-lactancia.org/" class="">e-lactancia</a> y las realizan pediatras y farmacéuticas de 
+                    APILAM para que puedas encontrar fácilmente la información que necesitas.
+                    </p>
+                </div>
+            </div>
+
+
+
             
         </div>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -28,18 +28,18 @@
                                 <div class="card-body" style="background-color: #9A94BC">
                                   <h4 class="card-title">Login</h4>
                                   <p class="card-text">
-                                        <form>
+                                        <form action="acciones/validarlogin.php" method="post">
                                                 <div class="form-group">
                                                   <label for="formGroupExampleInput">Usuario</label>
-                                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Usuario">
+                                                  <input type="text" name="loginuser" class="form-control" id="formGroupExampleInput" placeholder="Usuario">
                                                 </div>
                                                 <div class="form-group">
                                                   <label for="formGroupExampleInput2">Contraseña</label>
-                                                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Contraseña">
+                                                  <input type="password" class="form-control" name="loginpassword" id="formGroupExampleInput2" placeholder="Contraseña">
                                                 </div>
                                               </form>
                                   </p>
-                                  <a href="#!" class="btn btn-primary">Ingresar</a>
+                                  <a href="registro.php" class="btn btn-primary">Ingresar</a>
                                 </div>
                               </div>
                               

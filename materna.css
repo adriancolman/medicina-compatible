@@ -19,7 +19,7 @@ header{
    font-family:'Amatic SC', cursive;
    color: #9B5094;
    margin: 0%auto;
-   display: flexbox;
+   
    
 
 }
@@ -33,4 +33,16 @@ header{
 
 h4.subtitle{
   color: #7697B6;
+}
+
+a.irahome{    
+text-align: center;
+hover: red;
+margin-top: 300px;
+text-decoration: blink;
+padding: 10px;
+border: 2px #9B5094 solid;
+background-color: black;
+border-radius: 5px;
+
 }

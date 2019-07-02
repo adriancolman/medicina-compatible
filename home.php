@@ -18,7 +18,7 @@ session_start();
 
 </head>
     <body>
-        <div class="container" style="">
+        <div class="container">
             <header>
             <div class="row">
                 <div class="col-2">

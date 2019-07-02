@@ -23,10 +23,10 @@
               <div class="row">
                  <div class="col-sm-0 col-md-3"></div>
                    <div class="col-sm-12 col-md-8">
-                      <form>
+                      <form action="acciones\registro.php" method="post">
                           <div class="form-group">
                               <label for="formGroupExampleInput2"  style="color: #9B5094">Nombre</label>
-                              <input type="text" class="form-control"  style="color: #9B5094" id="nombre" placeholder="Nombre real">
+                              <input type="text" class="form-control"  style="color: #9B5094" name="user" id="nombre" placeholder="Nombre real">
                             </div>
                       <div class="form-group">
                         <label for="formGroupExampleInput"  style="color: #9B5094">Usuario</label>
@@ -34,15 +34,15 @@
                       </div>
                       <div class="form-group">
                         <label for="formGroupExampleInput2"  style="color: #9B5094">Contraseña</label>
-                        <input type="text"  style="color: #9B5094" class="form-control" id="contraseña" placeholder="contraseña">
+                        <input type="text"  style="color: #9B5094" class="form-control" id="contraseña" name="password" placeholder="contraseña">
                       </div>
                       
                         <div class="form-group">
                           <label for="formGroupExampleInput"  style="color: #9B5094">email</label>
-                          <input type="text"  style="color: #9B5094" class="form-control" id="mail" placeholder="@mail">
+                          <input type="text"  style="color: #9B5094" class="form-control" id="mail" name="email" placeholder="@mail">
                         </div>
 
-                        <a href="#!" class="btn btn-primary">Ingresar</a>
+                        <button class="btn btn-primary" type="submit"> Ingresar</button>
                         
                       
                       

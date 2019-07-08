@@ -4,7 +4,7 @@ require("acciones/conexion.php");
 session_start();
 ?>
 
-<!DOCTYPE htmal>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,6 +53,8 @@ session_start();
                         <a class="dropdown-item" href="login.php">inicia sesión</a>
                         <a class="dropdown-item" href="signup.php">registrate</a>
                         <a class="dropdown-item" href="#!">cerrar seión</a>
+                        <a class="dropdown-item" href="formulariomedicamentos.php">formuario subir</a>
+                        <a href="acciones\formulario_riesgo.php" class="dropdown-item">formulario riesgo</a>
                     </div>
                     </div>
 
@@ -112,7 +114,7 @@ session_start();
             </div>
 
 
-
+                    
             
         </div>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

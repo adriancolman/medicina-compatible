@@ -34,12 +34,12 @@
                       </div>
                       <div class="form-group">
                         <label for="formGroupExampleInput2"  style="color: #9B5094">Contraseña</label>
-                        <input type="text"  style="color: #9B5094" class="form-control" id="contraseña" name="password" placeholder="contraseña">
+                        <input type="password"  style="color: #9B5094" class="form-control" id="contraseña" name="password" placeholder="contraseña">
                       </div>
                       
                         <div class="form-group">
                           <label for="formGroupExampleInput"  style="color: #9B5094">email</label>
-                          <input type="text"  style="color: #9B5094" class="form-control" id="mail" name="email" placeholder="@mail">
+                          <input type="email"  style="color: #9B5094" class="form-control" id="mail" name="email" placeholder="@mail">
                         </div>
 
                         <button class="btn btn-primary" type="submit"> Ingresar</button>

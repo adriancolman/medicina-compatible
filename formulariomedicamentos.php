@@ -74,3 +74,4 @@ $riesgo = mysqli_fetch_array($resultado_riesgo);
 
 
 
+            

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>LoginAdmin</title>
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0 ">-->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-3 "></div>
                 <div class="col md-7">
-                    <p style="color:#C455A8; font-size: 25px; ">Inicia sesión y consulta de manera segura</p>
+                    <p style="color:#C455A8; font-size: 25px; ">Inicia sesión como administrador</p>
                 </div>
             </div>
 
@@ -28,14 +28,14 @@
                                 <div class="card-body" style="background-color: #CF8BA3">
                                   <h4 class="card-title">Login</h4>
                                   <p class="card-text">
-                                        <form action="acciones/validarlogin.php" method="post">
+                                        <form action="acciones/validaradmin.php" method="post">
                                                 <div class="form-group">
                                                   <label for="formGroupExampleInput">Usuario</label>
                                                   <input type="text" name="loginuser" class="form-control" id="formGroupExampleInput" placeholder="Usuario">
                                                 </div>
                                                 <div class="form-group">
                                                   <label for="formGroupExampleInput2">Contraseña</label>
-                                                  <input type="password" class="form-control" name="loginpassword" id="formGroupExampleInput2" placeholder="Contraseña">
+                                                  <input type="password" class="form-control" name="adminpassword" id="formGroupExampleInput2" placeholder="Contraseña">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary"> Ingresar</button>
                                               </form>
@@ -56,6 +56,13 @@
                 </div>
             </div> <br>
 
+            <div class="row">
+                <div class="col-3 col-sm-0"></div>
+                <div class="col-md-8 col-sm-12">
+                    ¿quieres ser administrador y agregar contenido? <a href="contacto.php">Contactanos</a> 
+                </div>
+            </div> <br>
+            
             
 
         </div>

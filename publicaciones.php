@@ -2,6 +2,19 @@
 require("acciones/conexion.php");
 
 session_start();
+
+
+$search = $_REQUEST['search'];
+$query = 'SELECT * FROM publicaciones WHERE titulo LIKE "' . $search . '"LIMIT 1 ';
+$resultado = mysqli_query($conexion, $query);
+$busqueda = mysqli_fetch_array($resultado);
+
+$query_alternativas = 'SELECT publicaciones.Titulo FROM alternativas RIGHT JOIN publicaciones ON alternativas.PublicacionAlternativaId = publicaciones.PublicacionId WHERE alternativas.PublicacionId = ' . $busqueda['PublicacionId'] .' GROUP BY(publicaciones.PublicacionId)'; 
+//RIGHT JOIN ON se usa para unir en la tabla publicaciones los campos Publicacion AlternativaId de la tabla alternativas con el campo publicacionId de la tabla publicaciones DONDE el campo PublicacionId de la tabla alternativas coincide con la busqueda realizada en la query $busqueda
+$resultado_alternativas = mysqli_query($conexion, $query_alternativas);
+
+$query_riesgo = 'SELECT * FROM NivelRiesgo WHERE NivelRiesgoId LIKE "' . $busqueda["NivelRiesgoId"] . '" LIMIT 1'; 
+$resultado_riesgo = mysqli_query($conexion, $query_riesgo);
 ?>
 
 <!DOCTYPE html>
@@ -18,15 +31,16 @@ session_start();
 
 </head>
     <body>
-        <div class="container">
-            <header>
-            <div class="row">
-                <div class="col-2">
-                   <div class="logo">
-                       <h3>APPTO
+        <div class="container" style="background-color:#F5ECEB">
+        <header>
+            <div class="row justify-content-center">
+               
+                <div class="d-none d-sm-block col-sm-1 col-md-2 col-lg-2" style="max-width:100%">
+                   <div class="logo" >
+                       <p>APPTO
                            
                            
-                       </h3> 
+</p> 
                        
                        
                             
@@ -36,29 +50,42 @@ session_start();
                      </div>   
 
                 </div>
-                <div class="col-3">
-                   <p style="margin-top:10px"> consultar para no dudar  </p>
+                <div class="d-none d-lg-block col-lg-3">
+                   <p style="margin-top:5%"> consultar para no dudar  </p>
                 </div>
-                <div class="offset-1 col-3">
-                  <input type="text" name="seacrh" placeholder="search" style="margin-top:10">  
+
+
+                <div class="d-none d-sm-block col-sm-6 col-md-5 col-lg-4">
+                  <form action="publicaciones.php">
+                  <input type="text" name="search" placeholder="buscar" id="search">
+                  <button type="submit" id="lupa"><i class="fas fa-search"></i></button>
+                  </form>  
                 </div>
-                <div class="offset-1 col-2">    
+                
+                <div class="d-xs-flex justify-content-end col-xs-12 col-sm-2 col-md-3 col-lg-2 " style=" max-width:100%">    
                     <div class="btn-group">
                     
-                    <button type="button" style="margin-top:10; background-color:#985094; padding-right:20" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" id="button-menu"  class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         
                         <i class="fas fa-align-justify"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="login.php">inicia sesión</a>
-                        <a class="dropdown-item" href="signup.php">registrate</a>
-                        <a class="dropdown-item" href="#!">cerrar seión</a>
-                        <a class="dropdown-item" href="formulariomedicamentos.php">formuario subir</a>
-                        <a href="acciones\formulario_riesgo.php" class="dropdown-item">formulario riesgo</a>
+                        
+                    <a class="dropdown-item" href="home.php">Principal</a>
+                        
+                        <a class="dropdown-item" href="acciones/cerrar-sesion.php">cerrar sesión</a>
+                         <a href="loginadmin.php" class="dropdown-item">¿eres administrador?</a>
+                      
                     </div>
                     </div>
 
-                     
+                         
+                </div>
+                <div class="col-xs-12 d-sm-none">
+                  <form action="publicaciones.php">
+                  <input type="text" name="search" placeholder="buscar" id="search">
+                  <button type="submit" id="lupa"><i class="fas fa-search"></i></button>
+                  </form>  
                 </div>
 
             </div>
@@ -66,25 +93,85 @@ session_start();
 
             </header>
 
-
                         <!--contenido de la pgina-->
 
-
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="titulo-medicamento">
+                    <?php 
+                    echo $busqueda['Titulo'];
+                    ?>
+                    </h1>
+                </div>
+            </div>
 
             <div class="row">
+            <?php while($riesgo = mysqli_fetch_array($resultado_riesgo)) {
+                  ?>
 
-                <?php 
-                
-                ?>
-                <div class="col-lg-3 col-md-3 col-sm-0 col-xs-0" id="columna-de-riesgo">
-                
+                <div class="col-lg-3 col-md-3 col-sm-0 col-xs-0" id="columna-de-riesgo"
+                 style="border:solid <?php echo $riesgo['Clave'];?>; color:<?php echo $riesgo['Clave'];?>;" >
+                 
+                  <div class="row">
+                  <div class="col-12">
+                  <h3>
+                      <?php echo $riesgo['Titulo'];?>
+
+                  </h3>
+                  </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12" style="background-color:<?php echo $riesgo['Clave'];?>" id="risk-descript">
+                          <p style="color:white;">
+                              <?php 
+                              echo $riesgo['Descripcion'];?>
+                          </p>
+                          <?php
+                  } ?>
+                      </div>
+                  </div>
+                  
                 </div>
-                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12" id="columna-contenido">
+                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12" id="columna-contenido">
+                    <P id="parrafo-contenido">
+                    <?php 
+                    echo $busqueda['Descripcion'];
+                    ?>
+                    </P>
 
-                    <h1 class="titulo producto"></h1>
+
+                    <a href=""></a>
+                    
+                    
                 </div>
 
-                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0" id="columna-sugerencias">
+                <div class="col-lg-2 col-md-3 col-sm-0 col-xs-0" id="columna-sugerencias">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 style="max-widht:100%">ALTERNATIVAS</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" >
+                        <?php
+                    while($alternativa = mysqli_fetch_array($resultado_alternativas)) {
+                        ?><a href="?search=<?php
+                        echo $alternativa["Titulo"];
+                        ?>">
+                        <?php
+                        echo $alternativa["Titulo"];
+                        ?>
+                        </a>
+                        <?php
+                     }
+
+                     if($alternativa = NULL) {
+                         echo 'este medicamento no tiene o no necesita alternativas';
+                     }
+                        ?>
+
+                        </div>
+                    </div>
                 
                 </div>
             

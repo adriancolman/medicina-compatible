@@ -12,12 +12,15 @@ mysqli_query($conexion, $medicine);
 
 echo mysqli_error($conexion);
 
- /*if (!$medicine) {
+ if (!$medicine) {
      echo 'error al subir';
  } else {
      echo 'subido correctamente';
  }
-*/
+ header('Location:home.php');
+
+
+
 
 
 ?>

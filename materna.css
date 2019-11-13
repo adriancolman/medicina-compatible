@@ -14,20 +14,69 @@ text-align: center;
     color: #9B5094;
 }
 
+
 header{
-   background-color: #7697B6; 
+   background-color: #E5CDC8; 
    font-family:'Amatic SC', cursive;
-   color: #9B5094;
-   margin: 0%auto;
+   color: #C455A8;
+   
+   
+   
+   
+
    
    
 
 }
+#columna-sugerencias{
+    background-color: #E4BFCC;
+    border-radius: 2%;
+    border: solid 1pt;
+}
+
+#search{
+    margin-top: 3%;
+    max-width: 100%;
+    justify-content: center;
+}
+
+button#button-menu {
+    background-color:#D7A6B3;
+    max-width: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: right;
+    margin-top: 10%;
+    
+    
+}
 
 .logo{
-    margin-left: 12px;
-    padding: 5px;
+    text-align: center;
+    padding: 5%;
+    max-width: 100%;
+    font-size: 1.5em;
+    width: 0% auto;
    
+
+}
+.a-favor{
+    margin-top: 10%;
+    
+    
+   
+
+}
+#risk-descript{
+    opacity: 0.6;
+    padding: 10%;
+    border-radius: 5%;
+    padding: 4%;
+}
+
+p#parrafo-contenido{
+    border:solid #F5ECEB;
+    margin: 7%;
 }
 
 
@@ -38,11 +87,20 @@ h4.subtitle{
 a.irahome{    
 text-align: center;
 hover: red;
-margin-top: 300px;
+margin-top: 250px;
 text-decoration: blink;
 padding: 10px;
 border: 2px #9B5094 solid;
-background-color: black;
+background-color: lightblue;
 border-radius: 5px;
 
+
 }
+
+p#mensaje-admin{
+    background-color: #F5ECEB;
+    font-size: 2em;
+
+}
+
+

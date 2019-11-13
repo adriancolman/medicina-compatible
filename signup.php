@@ -10,13 +10,13 @@
      <script src=script.js></script>
 
     </head>
-        <body style="background-color: #CDF7F6">
+        <body style="background-color: #D7A6B3">
           <div class="container">
                     <h1 id="title-form">APPTO LACTANTES</h1>
               <div class="row">
                    <div class="col-md-3"></div>
                    <div class=" col-sm-12 col-md-7">
-                        <p id="reg-msg" style="color:#9A94BC; font-size: 25px;">Regístrate para ver todo nuestro contenido</p>
+                        <p id="reg-msg" style="color:#F5ECEB; font-size: 25px;">Regístrate para ver todo nuestro contenido</p>
                    </div>
               </div>
 

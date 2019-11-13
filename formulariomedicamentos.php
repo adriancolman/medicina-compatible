@@ -1,6 +1,6 @@
 <?php
 require("acciones/conexion.php");
-$query = 'SELECT nivelriesgoid, titulo FROM nivelriesgo';
+$query = 'SELECT * FROM nivelriesgo';
 $resultado_riesgo = mysqli_query($conexion, $query);
 $riesgo = mysqli_fetch_array($resultado_riesgo);
 
@@ -33,13 +33,13 @@ $riesgo = mysqli_fetch_array($resultado_riesgo);
                     
                         <form action="subirpublic.php" method="post">
                         
-                        <input type="text" name="titulopublicacion" placeholder="titulo"><br><br>
+                        <input type="text" name="titulopublicacion" placeholder="nombre de la droga o medicamento"><br><br>
 
                         <textarea name="descripcionpublicacion" rows="14" cols="80"  placeholder="describe la publicacion" >
                         </textarea> <br><br>
 
                         <select name="nivelderiesgo" id="">
-                        <option value="<?php echo $riesgo['nivelriesgoid'] ?>"><?php echo $riesgo['titulo']?></option>
+                        <option value="<?php echo $riesgo['NivelRiesgoId'] ?>"><?php echo $riesgo['Titulo'];?></option>
                         <option value="2" name="bajo">Riesgo bajo</option>
                         <option value="3" name="alto">Riesgo alto</option>
                         <option value="4" name="muy-alto">muy alto</option>

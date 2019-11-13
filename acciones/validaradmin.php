@@ -2,15 +2,12 @@
     require("conexion.php");
 
     session_start();
-    
-
-   
 
     $username = $_REQUEST["loginuser"];
-    $password = $_REQUEST["loginpassword"];
+    $passadmin = $_REQUEST["adminpassword"];
     
 
-    $query = 'SELECT * FROM Usuarios WHERE Username LIKE "' . $username . '" LIMIT 1'; //LIKE se usa paa buscar texto por eso las comillas,
+    $query = 'SELECT * FROM usuarios WHERE Username LIKE "' . $username . '" LIMIT 1'; //LIKE se usa paa buscar texto por eso las comillas,
                                                                                        //si busco un numero uso =     
     $resultado = mysqli_query($conexion, $query); //almaceno en una variable la busqueda
 
@@ -22,15 +19,17 @@
 
      //aca verificamos si la variable password y la fila Password coinciden
 
-    if (password_verify($password, $fila['Password'])) {
-        $_SESSION['Username'] = $username;
-        $usuario = $fila['UsuarioId'];
-       
-        $_SESSION['userid'] = $usuario;
+    if (password_verify($passadmin, $fila['password'])) {
+        $_SESSION['username'] = $username;
+        $_SESSION['userid'] = $usuario['UsuarioId'];
 
-        header('Location:../home.php');
+    header('Location: ../home-admin.php'); }  
+               
+      else {
+        $_SESSION["message"] = "Usuario o contraseña invalidos";
+        header('Location: ../login.php');
     }
-       
+
     
     
 

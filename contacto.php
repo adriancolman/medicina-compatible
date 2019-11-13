@@ -2,7 +2,6 @@
 require("acciones/conexion.php");
 
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +57,7 @@ session_start();
                         <i class="fas fa-align-justify"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="contacto.php">Contactanos</a>
+                        <a class="dropdown-item" href="home.php">Principal</a>
                         
                         <a class="dropdown-item" href="acciones/cerrar-sesion.php">cerrar sesión</a>
                          <a href="loginadmin.php" class="dropdown-item">¿eres administrador?</a>
@@ -78,60 +77,39 @@ session_start();
 
 
             </header>
-                  <!--cuerpo de pagina-->
+                  
             
-            <div class="row">
-                <div class="d-none d-md-block col-md-4 col lg-4" style="background-color:#D7A6B3;">
-                    <img src="lactancia-materna-beneficios-madre.jpg" style="margin:0%auto; width-max:300px;" class="custom-class">
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="background-color:#D7A6B3">
-                    <div class="offset-1" style="margin-top:45px;">
-                        <h1>¿Consulta si es compatible con la lactancia?</h1>
-                        <br>
-                        <h3>
-                            Toda la información necesaria acerca de cualquier medicamento. <br>
-                            Por ejemplo: <a href="ibuprofeno.php">ibuprofeno,</a>
-                            <a href="" class="diclofenac">diclofenac,</a>
-                            <a href="aspirina" class="aspirina">aspirina</a>, etc.
-                        </h3>
             
-                    </div>
-                </div>
-            </div>   
             
-                            <!--avisos-->
+                            <!--contenido-->
 
             <div class="row">
                 <div class="  col-lg-7 offset-lg-3   col-md-7 offset-md-3 col-sm-12 col-xs-12">
                     <div class="a-favor">
                         <h4 class="subtitle" style="color:red; margin-top:30px;">
-                            Por la lactancia materna
+                            ¿Como colaborar con contenido?
 
                         </h4>
-                        <p class="">La lactancia materna es el fenómeno más saludable para bebés y madres 
-                            en todo tiempo y lugar. Muy pocas situaciones justifican contraindicarla.</p>
+                        <p class="">Si sos un facultativo en medicina o farmaceutica podés ser administrador
+                             y colaborar con informes , con contenido nuevo o modificando el existente.</p>
 
                     </div>
                 </div>
             </div>                
             <div class="row">
                 <div class=" col-lg-7 offset-lg-3  col-md-7 offset-md-3 col-sm-12 col-xs-12">
-                    <h4 class="subtitle"  style="color:red; margin-top:30px;">Hecho por profesionales
+                    <h4 class="subtitle"  style="color:red; margin-top:30px;">Quiero ser administrador
 
                     </h4 >
                     <p>
-                    Las indicaciones son recopiladas de <a href="http://www.e-lactancia.org/" class="">e-lactancia</a> y las realizan pediatras y farmacéuticas de 
-                    APILAM para que puedas encontrar fácilmente la información que necesitas.
+                    Seras dirigido a un formulario de ingreso donde deberas validar tu identidad, tu matricula
+                    y la forma de contactarnos para comenzar a profundizar los contenidos.  <br>
+                     <a href="registroadmin.php">Registrate como administrador</a>
                     </p>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-3 col-sm-0"></div>
-                <div class="col-md-8 col-sm-12">
-                   <p id="mensaje-admin"> ¿Quieres ser administrador y agregar contenido? <a href="contacto.php">Contactanos</a> </p>
-                </div>
-
+            
 
                     
             

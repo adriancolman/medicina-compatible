@@ -11,6 +11,8 @@ VALUES ("' . $tituloriesgo .'", "' . $descripcionriesgo .'", "' . $claveriesgo .
 
 mysqli_query($conexion, $query);
 
+header('Location: acciones\formulario_riesgo.php');
+
 /* 
                                 NIVELES DE RIESGO
 

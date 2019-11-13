@@ -58,10 +58,11 @@ session_start();
                         <i class="fas fa-align-justify"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="contacto.php">Contactanos</a>
-                        
+                        <a class="dropdown-item" href="login.php">inicia sesión</a>
+                        <a class="dropdown-item" href="signup.php">registrate</a>
                         <a class="dropdown-item" href="acciones/cerrar-sesion.php">cerrar sesión</a>
-                         <a href="loginadmin.php" class="dropdown-item">¿eres administrador?</a>
+                        <a class="dropdown-item" href="formulariomedicamentos.php">formuario subir</a>
+                        <a href="acciones\formulario_riesgo.php" class="dropdown-item">formulario riesgo</a>
                     </div>
                     </div>
 
@@ -91,7 +92,7 @@ session_start();
                         <h3>
                             Toda la información necesaria acerca de cualquier medicamento. <br>
                             Por ejemplo: <a href="ibuprofeno.php">ibuprofeno,</a>
-                            <a href="" class="diclofenac">diclofenac,</a>
+                            <a href="diclofenac.php" class="diclofenac">diclofenac,</a>
                             <a href="aspirina" class="aspirina">aspirina</a>, etc.
                         </h3>
             
@@ -125,12 +126,6 @@ session_start();
                     </p>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-3 col-sm-0"></div>
-                <div class="col-md-8 col-sm-12">
-                   <p id="mensaje-admin"> ¿Quieres ser administrador y agregar contenido? <a href="contacto.php">Contactanos</a> </p>
-                </div>
 
 
                     
